@@ -1,0 +1,413 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="JkR-1D-Opb">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--電卓-->
+        <scene sceneID="Eyh-gN-1BH">
+            <objects>
+                <viewController id="JkR-1D-Opb" customClass="CalcViewController" customModule="CaluculatorTestApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="kYb-a8-ZXf">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Plx-JU-1ry">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="112"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="1298" borderStyle="roundedRect" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7Ei-Yz-Iys">
+                                        <rect key="frame" x="16" y="16" width="343" height="80"/>
+                                        <color key="backgroundColor" name="calc-back"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="80" id="dsZ-db-z2j"/>
+                                        </constraints>
+                                        <color key="textColor" name="fill-black"/>
+                                        <fontDescription key="fontDescription" name="Kefa-Regular" family="Kefa" pointSize="45"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xg9-12-sRL">
+                                        <rect key="frame" x="24" y="20" width="4" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" weight="black" pointSize="17"/>
+                                        <color key="textColor" name="fill-black"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XGZ-X9-wDK">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="112"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" name="fill-black"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="XGZ-X9-wDK" secondAttribute="trailing" id="4fX-tI-8W6"/>
+                                    <constraint firstAttribute="bottom" secondItem="XGZ-X9-wDK" secondAttribute="bottom" id="Fp6-Oq-H5R"/>
+                                    <constraint firstItem="XGZ-X9-wDK" firstAttribute="top" secondItem="Plx-JU-1ry" secondAttribute="top" id="HqB-N8-0PJ"/>
+                                    <constraint firstItem="XGZ-X9-wDK" firstAttribute="leading" secondItem="Plx-JU-1ry" secondAttribute="leading" id="Mi4-eE-Jjf"/>
+                                    <constraint firstAttribute="bottom" secondItem="7Ei-Yz-Iys" secondAttribute="bottom" constant="16" id="Rnd-Wu-xOG"/>
+                                    <constraint firstItem="7Ei-Yz-Iys" firstAttribute="leading" secondItem="Plx-JU-1ry" secondAttribute="leading" constant="16" id="dog-Dt-rhs"/>
+                                    <constraint firstItem="7Ei-Yz-Iys" firstAttribute="top" secondItem="Plx-JU-1ry" secondAttribute="top" constant="16" id="eOU-J2-2nl"/>
+                                    <constraint firstItem="Xg9-12-sRL" firstAttribute="top" secondItem="Plx-JU-1ry" secondAttribute="top" constant="20" id="fvN-NG-bAb"/>
+                                    <constraint firstItem="Xg9-12-sRL" firstAttribute="leading" secondItem="Plx-JU-1ry" secondAttribute="leading" constant="24" id="gah-9b-KET"/>
+                                    <constraint firstAttribute="trailing" secondItem="7Ei-Yz-Iys" secondAttribute="trailing" constant="16" id="uMt-R2-jfK"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Bjn-Mt-Lk3">
+                                <rect key="frame" x="0.0" y="112" width="375" height="108"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e4X-fW-gDM" customClass="ACButton" customModule="CaluculatorTestApp" customModuleProvider="target">
+                                        <rect key="frame" x="16" y="8" width="82" height="92"/>
+                                        <state key="normal" title="AC"/>
+                                        <connections>
+                                            <action selector="allClearButtonTap:" destination="JkR-1D-Opb" eventType="touchUpInside" id="xKg-cL-edO"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O2E-nO-hUm" customClass="NumberButton" customModule="CaluculatorTestApp" customModuleProvider="target">
+                                        <rect key="frame" x="106" y="8" width="81.5" height="92"/>
+                                        <state key="normal" title="+/-"/>
+                                        <connections>
+                                            <action selector="plusMinusConvertButtonTap:" destination="JkR-1D-Opb" eventType="touchUpInside" id="AG2-fu-U6b"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yee-TN-SNR" customClass="NumberButton" customModule="CaluculatorTestApp" customModuleProvider="target">
+                                        <rect key="frame" x="195.5" y="8" width="82" height="92"/>
+                                        <state key="normal" title="◀︎"/>
+                                        <connections>
+                                            <action selector="backButtonTap:" destination="JkR-1D-Opb" eventType="touchUpInside" id="1vr-YX-Zsf"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QBv-hz-2xj" customClass="CalcButton" customModule="CaluculatorTestApp" customModuleProvider="target">
+                                        <rect key="frame" x="285.5" y="8" width="81.5" height="92"/>
+                                        <state key="normal" title="÷"/>
+                                        <connections>
+                                            <action selector="divideButtonTap:" destination="JkR-1D-Opb" eventType="touchUpInside" id="Zpy-ao-7pe"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" name="fill-black"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="O2E-nO-hUm" secondAttribute="bottom" constant="8" id="0ep-nD-lHi"/>
+                                    <constraint firstAttribute="bottom" secondItem="e4X-fW-gDM" secondAttribute="bottom" constant="8" id="3yf-uO-dp4"/>
+                                    <constraint firstItem="e4X-fW-gDM" firstAttribute="width" secondItem="yee-TN-SNR" secondAttribute="width" id="49T-el-gkP"/>
+                                    <constraint firstItem="yee-TN-SNR" firstAttribute="leading" secondItem="O2E-nO-hUm" secondAttribute="trailing" constant="8" id="BMS-WO-Q3I"/>
+                                    <constraint firstAttribute="trailing" secondItem="QBv-hz-2xj" secondAttribute="trailing" constant="8" id="Bzj-cs-b1G"/>
+                                    <constraint firstAttribute="bottom" secondItem="QBv-hz-2xj" secondAttribute="bottom" constant="8" id="GMT-jo-A5G"/>
+                                    <constraint firstItem="O2E-nO-hUm" firstAttribute="top" secondItem="Bjn-Mt-Lk3" secondAttribute="top" constant="8" id="Ofs-tj-irW"/>
+                                    <constraint firstItem="e4X-fW-gDM" firstAttribute="top" secondItem="Bjn-Mt-Lk3" secondAttribute="top" constant="8" id="YK0-ao-Din"/>
+                                    <constraint firstItem="O2E-nO-hUm" firstAttribute="leading" secondItem="e4X-fW-gDM" secondAttribute="trailing" constant="8" id="Yo6-T0-6kO"/>
+                                    <constraint firstItem="e4X-fW-gDM" firstAttribute="width" secondItem="O2E-nO-hUm" secondAttribute="width" id="ZRb-Ep-5Sa"/>
+                                    <constraint firstItem="QBv-hz-2xj" firstAttribute="leading" secondItem="yee-TN-SNR" secondAttribute="trailing" constant="8" id="eIv-PC-Sa9"/>
+                                    <constraint firstItem="e4X-fW-gDM" firstAttribute="width" secondItem="QBv-hz-2xj" secondAttribute="width" id="hG4-gu-vcm"/>
+                                    <constraint firstItem="yee-TN-SNR" firstAttribute="top" secondItem="Bjn-Mt-Lk3" secondAttribute="top" constant="8" id="n9o-VP-LoS"/>
+                                    <constraint firstAttribute="bottom" secondItem="yee-TN-SNR" secondAttribute="bottom" constant="8" id="q98-kX-QZH"/>
+                                    <constraint firstItem="QBv-hz-2xj" firstAttribute="top" secondItem="Bjn-Mt-Lk3" secondAttribute="top" constant="8" id="tFN-oQ-u55"/>
+                                    <constraint firstItem="e4X-fW-gDM" firstAttribute="leading" secondItem="Bjn-Mt-Lk3" secondAttribute="leading" constant="16" id="yxE-FB-NSK"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BFu-iU-Fp5">
+                                <rect key="frame" x="0.0" y="220" width="375" height="107.5"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hem-kP-LrL" customClass="NumberButton" customModule="CaluculatorTestApp" customModuleProvider="target">
+                                        <rect key="frame" x="16" y="8" width="82" height="91.5"/>
+                                        <state key="normal" title="7"/>
+                                        <connections>
+                                            <action selector="_7ButtonTap:" destination="JkR-1D-Opb" eventType="touchUpInside" id="XDS-3k-AfA"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fJD-NU-Csc" customClass="NumberButton" customModule="CaluculatorTestApp" customModuleProvider="target">
+                                        <rect key="frame" x="106" y="8" width="81.5" height="91.5"/>
+                                        <state key="normal" title="8"/>
+                                        <connections>
+                                            <action selector="_8ButtonTap:" destination="JkR-1D-Opb" eventType="touchUpInside" id="6er-Ks-Lyf"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oLB-hL-1Ke" customClass="NumberButton" customModule="CaluculatorTestApp" customModuleProvider="target">
+                                        <rect key="frame" x="195.5" y="8" width="82" height="91.5"/>
+                                        <state key="normal" title="9"/>
+                                        <connections>
+                                            <action selector="_9ButtonTap:" destination="JkR-1D-Opb" eventType="touchUpInside" id="uYY-pq-1TY"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vAZ-Hm-VyC" customClass="CalcButton" customModule="CaluculatorTestApp" customModuleProvider="target">
+                                        <rect key="frame" x="285.5" y="8" width="81.5" height="91.5"/>
+                                        <state key="normal" title="×"/>
+                                        <connections>
+                                            <action selector="multiplyButtonTap:" destination="JkR-1D-Opb" eventType="touchUpInside" id="VXE-v2-vVV"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" name="fill-black"/>
+                                <constraints>
+                                    <constraint firstItem="Hem-kP-LrL" firstAttribute="width" secondItem="oLB-hL-1Ke" secondAttribute="width" id="3ep-eL-dil"/>
+                                    <constraint firstItem="oLB-hL-1Ke" firstAttribute="top" secondItem="BFu-iU-Fp5" secondAttribute="top" constant="8" id="9zm-Gh-7GI"/>
+                                    <constraint firstAttribute="bottom" secondItem="vAZ-Hm-VyC" secondAttribute="bottom" constant="8" id="BSU-AF-R2Q"/>
+                                    <constraint firstAttribute="bottom" secondItem="Hem-kP-LrL" secondAttribute="bottom" constant="8" id="Cyk-IN-lON"/>
+                                    <constraint firstItem="vAZ-Hm-VyC" firstAttribute="leading" secondItem="oLB-hL-1Ke" secondAttribute="trailing" constant="8" id="OJZ-ht-sWn"/>
+                                    <constraint firstItem="Hem-kP-LrL" firstAttribute="top" secondItem="BFu-iU-Fp5" secondAttribute="top" constant="8" id="ZiF-aT-WuH"/>
+                                    <constraint firstAttribute="bottom" secondItem="oLB-hL-1Ke" secondAttribute="bottom" constant="8" id="bDL-F7-vtL"/>
+                                    <constraint firstAttribute="trailing" secondItem="vAZ-Hm-VyC" secondAttribute="trailing" constant="8" id="dRw-OI-npT"/>
+                                    <constraint firstItem="fJD-NU-Csc" firstAttribute="leading" secondItem="Hem-kP-LrL" secondAttribute="trailing" constant="8" id="f6V-Dh-eRJ"/>
+                                    <constraint firstItem="fJD-NU-Csc" firstAttribute="top" secondItem="BFu-iU-Fp5" secondAttribute="top" constant="8" id="fG8-ec-uLk"/>
+                                    <constraint firstItem="Hem-kP-LrL" firstAttribute="width" secondItem="vAZ-Hm-VyC" secondAttribute="width" id="kpy-3x-XIw"/>
+                                    <constraint firstItem="Hem-kP-LrL" firstAttribute="width" secondItem="fJD-NU-Csc" secondAttribute="width" id="mng-UC-T0p"/>
+                                    <constraint firstAttribute="bottom" secondItem="fJD-NU-Csc" secondAttribute="bottom" constant="8" id="sZu-OI-YQW"/>
+                                    <constraint firstItem="vAZ-Hm-VyC" firstAttribute="top" secondItem="BFu-iU-Fp5" secondAttribute="top" constant="8" id="teI-mY-H93"/>
+                                    <constraint firstItem="oLB-hL-1Ke" firstAttribute="leading" secondItem="fJD-NU-Csc" secondAttribute="trailing" constant="8" id="z2d-Ps-INU"/>
+                                    <constraint firstItem="Hem-kP-LrL" firstAttribute="leading" secondItem="BFu-iU-Fp5" secondAttribute="leading" constant="16" id="zCG-gJ-7dw"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Y6h-HZ-vPE">
+                                <rect key="frame" x="0.0" y="327.5" width="375" height="108"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xlV-5w-j34" customClass="NumberButton" customModule="CaluculatorTestApp" customModuleProvider="target">
+                                        <rect key="frame" x="16" y="8" width="82" height="92"/>
+                                        <state key="normal" title="4"/>
+                                        <connections>
+                                            <action selector="_4ButtonTap:" destination="JkR-1D-Opb" eventType="touchUpInside" id="Lt7-XR-rtq"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="M5V-EQ-kbn" customClass="NumberButton" customModule="CaluculatorTestApp" customModuleProvider="target">
+                                        <rect key="frame" x="106" y="8" width="81.5" height="92"/>
+                                        <state key="normal" title="5"/>
+                                        <connections>
+                                            <action selector="_5ButtonTap:" destination="JkR-1D-Opb" eventType="touchUpInside" id="CPX-MR-cBs"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eiY-Gr-fZp" customClass="NumberButton" customModule="CaluculatorTestApp" customModuleProvider="target">
+                                        <rect key="frame" x="195.5" y="8" width="82" height="92"/>
+                                        <state key="normal" title="6"/>
+                                        <connections>
+                                            <action selector="_6ButtonTap:" destination="JkR-1D-Opb" eventType="touchUpInside" id="DFd-BU-Co4"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Lg-yE-ZHy" customClass="CalcButton" customModule="CaluculatorTestApp" customModuleProvider="target">
+                                        <rect key="frame" x="285.5" y="8" width="81.5" height="92"/>
+                                        <state key="normal" title="-"/>
+                                        <connections>
+                                            <action selector="minusButtonTap:" destination="JkR-1D-Opb" eventType="touchUpInside" id="Wc4-l4-Y6N"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" name="fill-black"/>
+                                <constraints>
+                                    <constraint firstItem="xlV-5w-j34" firstAttribute="top" secondItem="Y6h-HZ-vPE" secondAttribute="top" constant="8" id="7dQ-yj-I5e"/>
+                                    <constraint firstItem="M5V-EQ-kbn" firstAttribute="top" secondItem="Y6h-HZ-vPE" secondAttribute="top" constant="8" id="CWb-Zq-MPK"/>
+                                    <constraint firstItem="eiY-Gr-fZp" firstAttribute="leading" secondItem="M5V-EQ-kbn" secondAttribute="trailing" constant="8" id="GzQ-5Q-92I"/>
+                                    <constraint firstItem="M5V-EQ-kbn" firstAttribute="leading" secondItem="xlV-5w-j34" secondAttribute="trailing" constant="8" id="L3j-Av-vHc"/>
+                                    <constraint firstItem="xlV-5w-j34" firstAttribute="width" secondItem="M5V-EQ-kbn" secondAttribute="width" id="LTv-rb-qQ8"/>
+                                    <constraint firstItem="xlV-5w-j34" firstAttribute="leading" secondItem="Y6h-HZ-vPE" secondAttribute="leading" constant="16" id="Prk-JM-4xi"/>
+                                    <constraint firstItem="xlV-5w-j34" firstAttribute="width" secondItem="eiY-Gr-fZp" secondAttribute="width" id="Sgq-31-cQ1"/>
+                                    <constraint firstAttribute="bottom" secondItem="0Lg-yE-ZHy" secondAttribute="bottom" constant="8" id="VeG-9e-8za"/>
+                                    <constraint firstAttribute="trailing" secondItem="0Lg-yE-ZHy" secondAttribute="trailing" constant="8" id="h9d-pb-N4l"/>
+                                    <constraint firstItem="0Lg-yE-ZHy" firstAttribute="leading" secondItem="eiY-Gr-fZp" secondAttribute="trailing" constant="8" id="kxn-OH-azE"/>
+                                    <constraint firstItem="xlV-5w-j34" firstAttribute="width" secondItem="0Lg-yE-ZHy" secondAttribute="width" id="oPY-Xx-22X"/>
+                                    <constraint firstAttribute="bottom" secondItem="xlV-5w-j34" secondAttribute="bottom" constant="8" id="rM6-3f-wxy"/>
+                                    <constraint firstItem="eiY-Gr-fZp" firstAttribute="top" secondItem="Y6h-HZ-vPE" secondAttribute="top" constant="8" id="ruW-2M-gUr"/>
+                                    <constraint firstItem="0Lg-yE-ZHy" firstAttribute="top" secondItem="Y6h-HZ-vPE" secondAttribute="top" constant="8" id="wYg-80-XdK"/>
+                                    <constraint firstAttribute="bottom" secondItem="M5V-EQ-kbn" secondAttribute="bottom" constant="8" id="wlT-Hh-042"/>
+                                    <constraint firstAttribute="bottom" secondItem="eiY-Gr-fZp" secondAttribute="bottom" constant="8" id="xht-xd-yxL"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zZZ-qJ-WdU">
+                                <rect key="frame" x="0.0" y="435.5" width="375" height="107.5"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="H6D-uz-Npg" customClass="NumberButton" customModule="CaluculatorTestApp" customModuleProvider="target">
+                                        <rect key="frame" x="16" y="8" width="82" height="91.5"/>
+                                        <state key="normal" title="1"/>
+                                        <connections>
+                                            <action selector="_1ButtonTap:" destination="JkR-1D-Opb" eventType="touchUpInside" id="UBx-QP-e8R"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sAp-GI-ziq" customClass="NumberButton" customModule="CaluculatorTestApp" customModuleProvider="target">
+                                        <rect key="frame" x="106" y="8" width="81.5" height="91.5"/>
+                                        <state key="normal" title="2"/>
+                                        <connections>
+                                            <action selector="_2ButtonTap:" destination="JkR-1D-Opb" eventType="touchUpInside" id="yd3-iZ-7L3"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CDF-jw-w0M" customClass="NumberButton" customModule="CaluculatorTestApp" customModuleProvider="target">
+                                        <rect key="frame" x="195.5" y="8" width="82" height="91.5"/>
+                                        <state key="normal" title="3"/>
+                                        <connections>
+                                            <action selector="_3ButtonTap:" destination="JkR-1D-Opb" eventType="touchUpInside" id="aE9-RN-vd7"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LFj-ri-twv" customClass="CalcButton" customModule="CaluculatorTestApp" customModuleProvider="target">
+                                        <rect key="frame" x="285.5" y="8" width="81.5" height="91.5"/>
+                                        <state key="normal" title="+"/>
+                                        <connections>
+                                            <action selector="plusButtonTap:" destination="JkR-1D-Opb" eventType="touchUpInside" id="RQe-R4-9ep"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" name="fill-black"/>
+                                <constraints>
+                                    <constraint firstItem="H6D-uz-Npg" firstAttribute="top" secondItem="zZZ-qJ-WdU" secondAttribute="top" constant="8" id="3lW-Pe-qVR"/>
+                                    <constraint firstItem="H6D-uz-Npg" firstAttribute="width" secondItem="sAp-GI-ziq" secondAttribute="width" id="H1w-Hj-OYJ"/>
+                                    <constraint firstAttribute="bottom" secondItem="LFj-ri-twv" secondAttribute="bottom" constant="8" id="KAf-sD-ZWx"/>
+                                    <constraint firstItem="sAp-GI-ziq" firstAttribute="leading" secondItem="H6D-uz-Npg" secondAttribute="trailing" constant="8" id="NeP-de-RuP"/>
+                                    <constraint firstItem="H6D-uz-Npg" firstAttribute="width" secondItem="LFj-ri-twv" secondAttribute="width" id="OFh-5F-m9y"/>
+                                    <constraint firstItem="CDF-jw-w0M" firstAttribute="top" secondItem="zZZ-qJ-WdU" secondAttribute="top" constant="8" id="UJT-XN-T0p"/>
+                                    <constraint firstItem="CDF-jw-w0M" firstAttribute="leading" secondItem="sAp-GI-ziq" secondAttribute="trailing" constant="8" id="VrI-CE-f5Q"/>
+                                    <constraint firstAttribute="bottom" secondItem="CDF-jw-w0M" secondAttribute="bottom" constant="8" id="Xqm-dQ-frs"/>
+                                    <constraint firstItem="LFj-ri-twv" firstAttribute="top" secondItem="zZZ-qJ-WdU" secondAttribute="top" constant="8" id="aO9-gx-nay"/>
+                                    <constraint firstItem="H6D-uz-Npg" firstAttribute="leading" secondItem="zZZ-qJ-WdU" secondAttribute="leading" constant="16" id="h00-WC-aZ3"/>
+                                    <constraint firstAttribute="bottom" secondItem="sAp-GI-ziq" secondAttribute="bottom" constant="8" id="hiB-nj-Fg3"/>
+                                    <constraint firstItem="LFj-ri-twv" firstAttribute="leading" secondItem="CDF-jw-w0M" secondAttribute="trailing" constant="8" id="i1G-85-EQx"/>
+                                    <constraint firstAttribute="bottom" secondItem="H6D-uz-Npg" secondAttribute="bottom" constant="8" id="qXI-rX-N8F"/>
+                                    <constraint firstItem="H6D-uz-Npg" firstAttribute="width" secondItem="CDF-jw-w0M" secondAttribute="width" id="tiU-8K-PlE"/>
+                                    <constraint firstAttribute="trailing" secondItem="LFj-ri-twv" secondAttribute="trailing" constant="8" id="x18-za-rl1"/>
+                                    <constraint firstItem="sAp-GI-ziq" firstAttribute="top" secondItem="zZZ-qJ-WdU" secondAttribute="top" constant="8" id="xkg-Q9-KnB"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="31u-eW-O9u">
+                                <rect key="frame" x="0.0" y="543" width="375" height="108"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Pz-Yt-g7j" customClass="NumberButton" customModule="CaluculatorTestApp" customModuleProvider="target">
+                                        <rect key="frame" x="16" y="8" width="82" height="92"/>
+                                        <state key="normal" title="0"/>
+                                        <connections>
+                                            <action selector="_0ButtonTap:" destination="JkR-1D-Opb" eventType="touchUpInside" id="Oz1-Az-Tj4"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rbx-3i-hnl" customClass="NumberButton" customModule="CaluculatorTestApp" customModuleProvider="target">
+                                        <rect key="frame" x="106" y="8" width="81.5" height="92"/>
+                                        <state key="normal" title="."/>
+                                        <connections>
+                                            <action selector="commaButtonTap:" destination="JkR-1D-Opb" eventType="touchUpInside" id="8bB-BN-pHh"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8fP-li-DiI" customClass="CalcButton" customModule="CaluculatorTestApp" customModuleProvider="target">
+                                        <rect key="frame" x="195.5" y="8" width="171.5" height="92"/>
+                                        <state key="normal" title="="/>
+                                        <connections>
+                                            <action selector="equalButtnoTap:" destination="JkR-1D-Opb" eventType="touchUpInside" id="Fkt-6F-8ed"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" name="fill-black"/>
+                                <constraints>
+                                    <constraint firstItem="rbx-3i-hnl" firstAttribute="top" secondItem="31u-eW-O9u" secondAttribute="top" constant="8" id="2mf-G2-Pf8"/>
+                                    <constraint firstAttribute="bottom" secondItem="8fP-li-DiI" secondAttribute="bottom" constant="8" id="A7D-hw-Cnu"/>
+                                    <constraint firstAttribute="bottom" secondItem="rbx-3i-hnl" secondAttribute="bottom" constant="8" id="PXY-uW-iH5"/>
+                                    <constraint firstItem="8fP-li-DiI" firstAttribute="leading" secondItem="rbx-3i-hnl" secondAttribute="trailing" constant="8" id="UcL-Lq-mpy"/>
+                                    <constraint firstItem="8fP-li-DiI" firstAttribute="top" secondItem="31u-eW-O9u" secondAttribute="top" constant="8" id="Y42-yB-Z3k"/>
+                                    <constraint firstAttribute="bottom" secondItem="5Pz-Yt-g7j" secondAttribute="bottom" constant="8" id="aVt-GT-Lja"/>
+                                    <constraint firstAttribute="trailing" secondItem="8fP-li-DiI" secondAttribute="trailing" constant="8" id="dbf-Fe-e24"/>
+                                    <constraint firstItem="5Pz-Yt-g7j" firstAttribute="top" secondItem="31u-eW-O9u" secondAttribute="top" constant="8" id="ij3-lC-Wgt"/>
+                                    <constraint firstItem="rbx-3i-hnl" firstAttribute="leading" secondItem="5Pz-Yt-g7j" secondAttribute="trailing" constant="8" id="ivX-fR-2JE"/>
+                                    <constraint firstItem="5Pz-Yt-g7j" firstAttribute="leading" secondItem="31u-eW-O9u" secondAttribute="leading" constant="16" id="j2m-gF-sOs"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="AM1-Q5-QB6"/>
+                        <color key="backgroundColor" name="fill-black"/>
+                        <constraints>
+                            <constraint firstItem="Y6h-HZ-vPE" firstAttribute="top" secondItem="BFu-iU-Fp5" secondAttribute="bottom" id="0yS-wU-uOg"/>
+                            <constraint firstAttribute="trailing" secondItem="31u-eW-O9u" secondAttribute="trailing" id="1z9-ij-Taf"/>
+                            <constraint firstItem="Plx-JU-1ry" firstAttribute="trailing" secondItem="AM1-Q5-QB6" secondAttribute="trailing" id="3Hi-pY-ARS"/>
+                            <constraint firstItem="Bjn-Mt-Lk3" firstAttribute="height" secondItem="31u-eW-O9u" secondAttribute="height" id="9mx-ZJ-EpH"/>
+                            <constraint firstItem="AM1-Q5-QB6" firstAttribute="trailing" secondItem="Y6h-HZ-vPE" secondAttribute="trailing" id="AVY-Dk-Qus"/>
+                            <constraint firstItem="Y6h-HZ-vPE" firstAttribute="leading" secondItem="kYb-a8-ZXf" secondAttribute="leading" id="EvF-pe-LOf"/>
+                            <constraint firstItem="H6D-uz-Npg" firstAttribute="width" secondItem="rbx-3i-hnl" secondAttribute="width" id="FmC-h4-GC3"/>
+                            <constraint firstItem="Bjn-Mt-Lk3" firstAttribute="leading" secondItem="AM1-Q5-QB6" secondAttribute="leading" id="Gml-cu-l1K"/>
+                            <constraint firstItem="zZZ-qJ-WdU" firstAttribute="leading" secondItem="kYb-a8-ZXf" secondAttribute="leading" id="J2R-iD-2cy"/>
+                            <constraint firstItem="Plx-JU-1ry" firstAttribute="top" secondItem="AM1-Q5-QB6" secondAttribute="top" id="KjS-Tz-xKW"/>
+                            <constraint firstItem="H6D-uz-Npg" firstAttribute="width" secondItem="5Pz-Yt-g7j" secondAttribute="width" id="UDJ-8j-XLa"/>
+                            <constraint firstAttribute="trailing" secondItem="zZZ-qJ-WdU" secondAttribute="trailing" id="bzk-nT-kOC"/>
+                            <constraint firstItem="Bjn-Mt-Lk3" firstAttribute="top" secondItem="Plx-JU-1ry" secondAttribute="bottom" id="d7B-Zk-Y3a"/>
+                            <constraint firstItem="AM1-Q5-QB6" firstAttribute="trailing" secondItem="BFu-iU-Fp5" secondAttribute="trailing" id="d96-cP-mbn"/>
+                            <constraint firstItem="Bjn-Mt-Lk3" firstAttribute="trailing" secondItem="AM1-Q5-QB6" secondAttribute="trailing" id="eqC-rE-2av"/>
+                            <constraint firstItem="31u-eW-O9u" firstAttribute="leading" secondItem="kYb-a8-ZXf" secondAttribute="leading" id="gq4-hd-Huu"/>
+                            <constraint firstItem="Bjn-Mt-Lk3" firstAttribute="height" secondItem="Y6h-HZ-vPE" secondAttribute="height" id="r17-lr-zRW"/>
+                            <constraint firstItem="Bjn-Mt-Lk3" firstAttribute="height" secondItem="BFu-iU-Fp5" secondAttribute="height" id="rjs-fP-0i8"/>
+                            <constraint firstItem="31u-eW-O9u" firstAttribute="top" secondItem="zZZ-qJ-WdU" secondAttribute="bottom" id="s5P-nU-tUt"/>
+                            <constraint firstItem="Plx-JU-1ry" firstAttribute="leading" secondItem="AM1-Q5-QB6" secondAttribute="leading" id="tf9-iP-scu"/>
+                            <constraint firstItem="BFu-iU-Fp5" firstAttribute="top" secondItem="Bjn-Mt-Lk3" secondAttribute="bottom" id="tv6-Um-Xjy"/>
+                            <constraint firstItem="Bjn-Mt-Lk3" firstAttribute="height" secondItem="zZZ-qJ-WdU" secondAttribute="height" id="vhA-sx-bbm"/>
+                            <constraint firstItem="AM1-Q5-QB6" firstAttribute="bottom" secondItem="31u-eW-O9u" secondAttribute="bottom" constant="16" id="wjE-mq-r6U"/>
+                            <constraint firstItem="BFu-iU-Fp5" firstAttribute="leading" secondItem="kYb-a8-ZXf" secondAttribute="leading" id="wwd-e6-cCc"/>
+                            <constraint firstItem="zZZ-qJ-WdU" firstAttribute="top" secondItem="Y6h-HZ-vPE" secondAttribute="bottom" id="zEs-8x-f4E"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="電卓" id="qtU-1i-hX7"/>
+                    <connections>
+                        <outlet property="calcResultTextField" destination="7Ei-Yz-Iys" id="I82-WC-Kag"/>
+                        <outlet property="calcStatusLabel" destination="Xg9-12-sRL" id="ZFR-Bv-yCe"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="y3e-h5-pLc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1392.8" y="67.916041979010501"/>
+        </scene>
+    </scenes>
+    <designables>
+        <designable name="0Lg-yE-ZHy">
+            <size key="intrinsicContentSize" width="30" height="30"/>
+        </designable>
+        <designable name="5Pz-Yt-g7j">
+            <size key="intrinsicContentSize" width="30" height="30"/>
+        </designable>
+        <designable name="8fP-li-DiI">
+            <size key="intrinsicContentSize" width="30" height="30"/>
+        </designable>
+        <designable name="CDF-jw-w0M">
+            <size key="intrinsicContentSize" width="30" height="30"/>
+        </designable>
+        <designable name="H6D-uz-Npg">
+            <size key="intrinsicContentSize" width="30" height="30"/>
+        </designable>
+        <designable name="Hem-kP-LrL">
+            <size key="intrinsicContentSize" width="30" height="30"/>
+        </designable>
+        <designable name="LFj-ri-twv">
+            <size key="intrinsicContentSize" width="30" height="30"/>
+        </designable>
+        <designable name="M5V-EQ-kbn">
+            <size key="intrinsicContentSize" width="30" height="30"/>
+        </designable>
+        <designable name="O2E-nO-hUm">
+            <size key="intrinsicContentSize" width="30" height="30"/>
+        </designable>
+        <designable name="QBv-hz-2xj">
+            <size key="intrinsicContentSize" width="30" height="30"/>
+        </designable>
+        <designable name="e4X-fW-gDM">
+            <size key="intrinsicContentSize" width="30" height="30"/>
+        </designable>
+        <designable name="eiY-Gr-fZp">
+            <size key="intrinsicContentSize" width="30" height="30"/>
+        </designable>
+        <designable name="fJD-NU-Csc">
+            <size key="intrinsicContentSize" width="30" height="30"/>
+        </designable>
+        <designable name="oLB-hL-1Ke">
+            <size key="intrinsicContentSize" width="30" height="30"/>
+        </designable>
+        <designable name="rbx-3i-hnl">
+            <size key="intrinsicContentSize" width="30" height="30"/>
+        </designable>
+        <designable name="sAp-GI-ziq">
+            <size key="intrinsicContentSize" width="30" height="30"/>
+        </designable>
+        <designable name="vAZ-Hm-VyC">
+            <size key="intrinsicContentSize" width="30" height="30"/>
+        </designable>
+        <designable name="xlV-5w-j34">
+            <size key="intrinsicContentSize" width="30" height="30"/>
+        </designable>
+        <designable name="yee-TN-SNR">
+            <size key="intrinsicContentSize" width="30" height="30"/>
+        </designable>
+    </designables>
+    <resources>
+        <namedColor name="calc-back">
+            <color red="0.76499998569488525" green="0.79699999094009399" blue="0.75700002908706665" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
+        <namedColor name="fill-black">
+            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>
